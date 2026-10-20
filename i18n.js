@@ -18,7 +18,7 @@ const common = {
     form_lead: 'Опишите объект: регион, тип грунта, площадь или километраж. Инженер подберёт конструкцию и норму расхода, менеджер — цену и логистику.',
     f_name: 'Имя', f_org: 'Организация', f_phone: 'Телефон', f_mail: 'Почта для сметы', f_type: 'Тип объекта', f_vol: 'Регион и объём (м² или км)',
     f_types: ['Автодорога общего пользования', 'Промысловая / технологическая дорога', 'Alatau City — улицы и инфраструктура', 'Площадка, паркинг, склад', 'Карьер / ГОК', 'Другое'],
-    f_send: 'Отправить заявку в WhatsApp', wa_head: 'Заявка с сайта screpton.kz', wa_calc: 'Расчёт из калькулятора', f_legal: 'Нажимая кнопку, вы соглашаетесь с обработкой персональных данных.', f_done: 'Открываем WhatsApp', f_done2: 'Сообщение с заявкой уже заполнено — нажмите «Отправить» в WhatsApp. Если окно не открылось, напишите на +7 701 566 87 31.',
+    f_send: 'Отправить заявку в WhatsApp', wa_head: 'Заявка с сайта screpton.kz', wa_calc: 'Расчёт из калькулятора', f_legal: 'Нажимая кнопку, вы соглашаетесь с обработкой персональных данных.', f_done: 'Открываем WhatsApp', f_done2: 'Сообщение с заявкой уже заполнено — нажмите «Отправить» в WhatsApp. Если окно не открылось, напишите на +7 777 439 92 77.',
     f_fast: 'Быстрее — в WhatsApp:'
   },
   kz: {
@@ -35,7 +35,7 @@ const common = {
     form_lead: 'Нысанды сипаттаңыз: аймақ, топырақ түрі, аумақ немесе километраж. Инженер конструкция мен шығын нормасын, менеджер баға мен логистиканы таңдайды.',
     f_name: 'Аты', f_org: 'Ұйым', f_phone: 'Телефон', f_mail: 'Смета үшін пошта', f_type: 'Нысан түрі', f_vol: 'Аймақ және көлем (м² немесе км)',
     f_types: ['Жалпы пайдаланымдағы автожол', 'Кәсіпшілік / технологиялық жол', 'Alatau City — көшелер мен инфрақұрылым', 'Алаң, тұрақ, қойма', 'Карьер / КБК', 'Басқа'],
-    f_send: 'Өтінімді WhatsApp-қа жіберу', wa_head: 'screpton.kz сайтынан өтінім', wa_calc: 'Калькулятор есебі', f_legal: 'Түймені басу арқылы дербес деректерді өңдеуге келісесіз.', f_done: 'WhatsApp ашылуда', f_done2: 'Өтінім хабарламасы дайын — WhatsApp-та «Жіберу» түймесін басыңыз. Терезе ашылмаса, +7 701 566 87 31 нөміріне жазыңыз.',
+    f_send: 'Өтінімді WhatsApp-қа жіберу', wa_head: 'screpton.kz сайтынан өтінім', wa_calc: 'Калькулятор есебі', f_legal: 'Түймені басу арқылы дербес деректерді өңдеуге келісесіз.', f_done: 'WhatsApp ашылуда', f_done2: 'Өтінім хабарламасы дайын — WhatsApp-та «Жіберу» түймесін басыңыз. Терезе ашылмаса, +7 777 439 92 77 нөміріне жазыңыз.',
     f_fast: 'Жылдамырақ — WhatsApp:'
   },
   en: {
@@ -52,16 +52,16 @@ const common = {
     form_lead: 'Describe the site: region, soil type, area or length. An engineer selects the pavement structure and dosage, a manager handles price and logistics.',
     f_name: 'Name', f_org: 'Organization', f_phone: 'Phone', f_mail: 'Email for the estimate', f_type: 'Site type', f_vol: 'Region and volume (m² or km)',
     f_types: ['Public road', 'Haul / field road', 'Alatau City — streets and infrastructure', 'Yard, parking, warehouse', 'Quarry / mining', 'Other'],
-    f_send: 'Send request via WhatsApp', wa_head: 'Request from screpton.kz', wa_calc: 'Calculator estimate', f_legal: 'By clicking you agree to the processing of personal data.', f_done: 'Opening WhatsApp', f_done2: 'Your request message is ready — tap Send in WhatsApp. If nothing opened, message +7 701 566 87 31.',
+    f_send: 'Send request via WhatsApp', wa_head: 'Request from screpton.kz', wa_calc: 'Calculator estimate', f_legal: 'By clicking you agree to the processing of personal data.', f_done: 'Opening WhatsApp', f_done2: 'Your request message is ready — tap Send in WhatsApp. If nothing opened, message +7 777 439 92 77.',
     f_fast: 'Faster on WhatsApp:'
   }
 };
 
 const home = {
   ru: {
-    hero_kicker: 'Стабилизатор грунта · Произведено в Казахстане',
-    hero_h1: 'Дорога из грунта, который уже лежит под ногами',
-    hero_lead: 'SCREPTON связывает местный грунт в основание прочностью до 21,7 МПа. Казахстанский производитель, объекты с 2009 года',
+    hero_kicker: 'Стабилизатор грунта SCREPTON · Рекомендации КаздорНИИ',
+    hero_h1: 'Основание дороги без замены грунта — до 30% дешевле',
+    hero_lead: 'Укрепляем местный грунт прямо на участке: корыто 30 см вместо метра выемки, без привозного щебня и без вскрытия коммуникаций. Прочность до 21,7 МПа. Более 20 улиц Астаны и 68 км дорог в 4 областях',
     slides: [['img/hero.jpg', 'Готовая дорога'], ['img/astana-after-2.jpg', 'Улица Астаны после ремонта'], ['img/plant.jpg', 'Производство, Темиртау']],
     intro_h: 'SCREPTON — стабилизатор грунта. Казахстанское производство с 2009 года',
     intro_p1: 'Неорганическое вяжущее SCREPTON и полимерная эмульсия SCREPTON-M превращают местный грунт в монолитное основание дороги. Привозной щебень, три слоя основания и битумные проливки больше не нужны.',
@@ -128,9 +128,9 @@ const home = {
     c_note: 'Цены на материалы и доставку в ваш регион пришлём сметой на почту в течение рабочего дня.', c_cta: 'Получить смету'
   },
   kz: {
-    hero_kicker: 'Топырақ тұрақтандырғыш · Қазақстанда өндірілген',
-    hero_h1: 'Аяқ астындағы топырақтан салынған жол',
-    hero_lead: 'SCREPTON жергілікті топырақты беріктігі 21,7 МПа-ға дейінгі негізге айналдырады. Қазақстандық өндіруші, 2009 жылдан бергі нысандар',
+    hero_kicker: 'SCREPTON топырақ тұрақтандырғышы · ҚазжолҒЗИ ұсынымдары',
+    hero_h1: 'Топырақты ауыстырмай жол негізі — 30%-ға дейін арзан',
+    hero_lead: 'Жергілікті топырақты учаскеде нығайтамыз: бір метр қазудың орнына 30 см науа, тасымалданатын қиыршық тассыз, коммуникацияларды ашпай. Беріктігі 21,7 МПа-ға дейін. Астанада 20-дан астам көше, 4 облыста 68 км жол',
     slides: [['img/hero.jpg', 'Дайын жол'], ['img/astana-after-2.jpg', 'Жөндеуден кейінгі Астана көшесі'], ['img/plant.jpg', 'Өндіріс, Теміртау']],
     intro_h: 'SCREPTON — топырақ тұрақтандырғыш. 2009 жылдан бергі қазақстандық өндіріс',
     intro_p1: 'SCREPTON бейорганикалық тұтқыр заты мен SCREPTON-M полимер эмульсиясы жергілікті топырақты жолдың монолитті негізіне айналдырады. Сырттан әкелінетін қиыршық тас, үш қабат негіз және битум құю енді қажет емес.',
@@ -197,9 +197,9 @@ const home = {
     c_note: 'Материалдар мен аймағыңызға жеткізу бағасын жұмыс күні ішінде поштаға сметамен жібереміз.', c_cta: 'Смета алу'
   },
   en: {
-    hero_kicker: 'Soil stabilizer · Made in Kazakhstan',
-    hero_h1: 'A road built from the ground already beneath your feet',
-    hero_lead: 'SCREPTON binds local soil into a road base of up to 21.7 MPa. Made in Kazakhstan, projects since 2009',
+    hero_kicker: 'SCREPTON soil stabilizer · KazdorNII guidelines',
+    hero_h1: 'Road base without soil replacement — up to 30% cheaper',
+    hero_lead: 'We stabilize the local soil right on site: a 30 cm trough instead of a metre of excavation, no imported crushed stone, no digging up utilities. Strength up to 21.7 MPa. 20+ streets in Astana and 68 km of roads in 4 regions',
     slides: [['img/hero.jpg', 'Finished road'], ['img/astana-after-2.jpg', 'An Astana street after repair'], ['img/plant.jpg', 'Production, Temirtau']],
     intro_h: 'SCREPTON is a soil stabilizer. Made in Kazakhstan since 2009',
     intro_p1: 'The inorganic binder SCREPTON and the polymer emulsion SCREPTON-M turn local soil into a monolithic road base. No imported crushed stone, no three-layer base, no bitumen sprays.',
