@@ -60,6 +60,7 @@
       [data-m="card"]{padding:24px 20px!important}
       [data-m="sticky"]{position:static!important}
       [data-m="stack"]{grid-template-columns:1fr!important;gap:12px!important}
+      [data-m="gal"]{grid-template-columns:repeat(2,1fr)!important;gap:10px!important}
       [data-m="pointrow"]{grid-template-columns:28px 1fr auto!important}
       [data-m="pointrow"]>span:nth-child(2){display:none}
       footer [data-m="fgrid"]{grid-template-columns:1fr!important}
@@ -205,7 +206,7 @@
       </div>
       <a href="Project.dc.html" style="border:1px solid #2B2B2B;border-radius:16px;padding:13px 22px;font-size:15px;font-weight:600" style-hover="background:#2B2B2B;color:#fff">{{ t.all }}</a>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px">
       <sc-for list="{{ cases }}" as="c" hint-placeholder-count="4">
         <a href="Project.dc.html" style="background:#fff;border:1px solid #E6E6E3;border-radius:24px;overflow:hidden;display:flex;flex-direction:column;color:inherit" style-hover="border-color:#2B2B2B;color:inherit">
           <div style="aspect-ratio:4/3;background:#EDEDEA;overflow:hidden;position:relative">
@@ -307,6 +308,53 @@
         <div style="font-size:19px;font-weight:600;margin:auto 0 10px;padding-top:28px">{{ s.title }}</div>
         <p style="margin:0;font-size:14px;line-height:1.55;color:#4A4A47">{{ s.text }}</p>
       </div>
+    </sc-for>
+  </div>
+</section>
+
+<!-- Astana -->
+<section id="astana" style="max-width:1440px;width:100%;margin:0 auto;padding:clamp(72px,8vw,112px) 32px 0" data-px>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:48px;align-items:start">
+    <div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:#1B5E3B;margin-bottom:16px">{{ t.ast_k }}</div>
+      <h2 style="margin:0 0 20px;font-size:clamp(32px,3.6vw,48px);font-weight:600;line-height:1.1;letter-spacing:-.02em;text-wrap:pretty">{{ t.ast_h }}</h2>
+      <p style="margin:0 0 28px;font-size:17px;line-height:1.6;color:#4A4A47;max-width:60ch">{{ t.ast_lead }}</p>
+      <div style="background:#F5F5F3;border-radius:24px;padding:24px 28px;max-width:60ch">
+        <div style="font-size:19px;font-weight:600;margin-bottom:8px">{{ t.ast_anti_h }}</div>
+        <p style="margin:0;font-size:15px;line-height:1.6;color:#4A4A47">{{ t.ast_anti_p }}</p>
+      </div>
+    </div>
+    <div data-m="grid2" style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px">
+      <sc-for list="{{ astFacts }}" as="f" hint-placeholder-count="4">
+        <div style="border:1px solid #E6E6E3;border-radius:24px;padding:24px;min-height:150px;display:flex;flex-direction:column;justify-content:space-between;gap:16px">
+          <div style="font-size:clamp(30px,3vw,40px);font-weight:600;letter-spacing:-.02em;line-height:1;color:#1B5E3B">{{ f.v }}</div>
+          <div style="font-size:14px;line-height:1.5;color:#4A4A47">{{ f.l }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+  <div data-m="gal" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px;margin-top:48px">
+    <sc-for list="{{ astGal }}" as="g" hint-placeholder-count="8">
+      <figure style="margin:0;border-radius:20px;overflow:hidden;background:#EDEDEA;position:relative;aspect-ratio:4/5">
+        <img src="{{ g.src }}" alt="{{ g.cap }}" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">
+        <figcaption style="position:absolute;left:0;right:0;bottom:0;padding:40px 16px 14px;color:#fff;font-size:13px;line-height:1.4;background:linear-gradient(180deg,rgba(26,26,23,0),rgba(26,26,23,.8))">{{ g.cap }}</figcaption>
+      </figure>
+    </sc-for>
+  </div>
+</section>
+
+<!-- Videos -->
+<section id="video" style="background:#2B2B2B;color:#fff;margin-top:clamp(72px,8vw,112px);padding:clamp(56px,6vw,88px) 0;overflow:hidden">
+  <div style="max-width:1440px;margin:0 auto;padding:0 32px" data-px>
+    <div style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:#F5C400;margin-bottom:16px">{{ t.vid_k }}</div>
+    <h2 style="margin:0;font-size:clamp(32px,3.6vw,48px);font-weight:600;line-height:1.1;letter-spacing:-.02em">{{ t.vid_h }}</h2>
+  </div>
+  <div style="display:flex;gap:16px;overflow-x:auto;padding:40px 32px 8px;scroll-snap-type:x mandatory;scrollbar-width:thin" data-px>
+    <sc-for list="{{ vids }}" as="v" hint-placeholder-count="7">
+      <figure style="margin:0;flex:0 0 260px;scroll-snap-align:start;border-radius:20px;overflow:hidden;background:#1a1a17;position:relative;aspect-ratio:9/16">
+        <video src="{{ v.mp4 }}" poster="{{ v.poster }}" muted loop playsinline preload="none" style="width:100%;height:100%;object-fit:cover;display:block" onMouseEnter="{{ v.play }}" onMouseLeave="{{ v.pause }}" onClick="{{ v.toggle }}"></video>
+        <figcaption style="position:absolute;left:0;right:0;bottom:0;padding:40px 16px 14px;font-size:13px;line-height:1.4;background:linear-gradient(180deg,rgba(26,26,23,0),rgba(26,26,23,.85))">{{ v.cap }}</figcaption>
+      </figure>
     </sc-for>
   </div>
 </section>
@@ -493,6 +541,9 @@ class Component extends DCLogic {
       strPts: strXY.map((p, i) => ({ x: p[0], y: p[1], vy: p[1] - 14, v: strV[i], l: (t.str_x || [])[i] })),
       steps: (t.steps || []).map((x, i) => ({ n: '0' + (i + 1), title: x[0], text: x[1], img: 'img/step' + (i + 1) + '.jpg' })),
       alatauFacts: (t.alatau_facts || []).map(f => ({ v: f[0], l: f[1] })),
+      astFacts: (t.ast_facts || []).map(f => ({ v: f[0], l: f[1] })),
+      astGal: (t.ast_gal || []).map(g => ({ src: g[0], cap: g[1] })),
+      vids: (t.vids || []).map(v => ({ mp4: v[0] + '.mp4', poster: v[0] + '.jpg', cap: v[1], play: ev => { try { ev.currentTarget.play(); } catch (e) {} }, pause: ev => { try { ev.currentTarget.pause(); } catch (e) {} }, toggle: ev => { const el = ev.currentTarget; el.paused ? el.play() : el.pause(); } })),
       docs: (t.docs || []).map(d => ({ img: d[0], cat: d[1], title: d[2], meta: d[3] })),
       area: s.area, h: s.h, areaLabel: fmt(s.area) + ' м²', hLabel: s.h + (s.lang === 'en' ? ' cm' : ' см'),
       setArea: ev => this.setState({ area: +ev.target.value }), setH: ev => this.setState({ h: +ev.target.value }),
