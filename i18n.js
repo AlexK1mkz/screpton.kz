@@ -18,7 +18,7 @@ const common = {
     form_lead: 'Опишите объект: регион, тип грунта, площадь или километраж. Инженер подберёт конструкцию и норму расхода, менеджер — цену и логистику.',
     f_name: 'Имя', f_org: 'Организация', f_phone: 'Телефон', f_mail: 'Почта для сметы', f_type: 'Тип объекта', f_vol: 'Регион и объём (м² или км)',
     f_types: ['Автодорога общего пользования', 'Промысловая / технологическая дорога', 'Alatau City — улицы и инфраструктура', 'Площадка, паркинг, склад', 'Карьер / ГОК', 'Другое'],
-    f_send: 'Отправить', f_legal: 'Нажимая кнопку, вы соглашаетесь с обработкой персональных данных.', f_done: 'Заявка принята', f_done2: 'Инженер свяжется с вами в течение рабочего дня.',
+    f_send: 'Отправить заявку в WhatsApp', wa_head: 'Заявка с сайта screpton.kz', wa_calc: 'Расчёт из калькулятора', f_legal: 'Нажимая кнопку, вы соглашаетесь с обработкой персональных данных.', f_done: 'Открываем WhatsApp', f_done2: 'Сообщение с заявкой уже заполнено — нажмите «Отправить» в WhatsApp. Если окно не открылось, напишите на +7 701 566 87 31.',
     f_fast: 'Быстрее — в WhatsApp:'
   },
   kz: {
@@ -35,7 +35,7 @@ const common = {
     form_lead: 'Нысанды сипаттаңыз: аймақ, топырақ түрі, аумақ немесе километраж. Инженер конструкция мен шығын нормасын, менеджер баға мен логистиканы таңдайды.',
     f_name: 'Аты', f_org: 'Ұйым', f_phone: 'Телефон', f_mail: 'Смета үшін пошта', f_type: 'Нысан түрі', f_vol: 'Аймақ және көлем (м² немесе км)',
     f_types: ['Жалпы пайдаланымдағы автожол', 'Кәсіпшілік / технологиялық жол', 'Alatau City — көшелер мен инфрақұрылым', 'Алаң, тұрақ, қойма', 'Карьер / КБК', 'Басқа'],
-    f_send: 'Жіберу', f_legal: 'Түймені басу арқылы дербес деректерді өңдеуге келісесіз.', f_done: 'Өтінім қабылданды', f_done2: 'Инженер жұмыс күні ішінде хабарласады.',
+    f_send: 'Өтінімді WhatsApp-қа жіберу', wa_head: 'screpton.kz сайтынан өтінім', wa_calc: 'Калькулятор есебі', f_legal: 'Түймені басу арқылы дербес деректерді өңдеуге келісесіз.', f_done: 'WhatsApp ашылуда', f_done2: 'Өтінім хабарламасы дайын — WhatsApp-та «Жіберу» түймесін басыңыз. Терезе ашылмаса, +7 701 566 87 31 нөміріне жазыңыз.',
     f_fast: 'Жылдамырақ — WhatsApp:'
   },
   en: {
@@ -52,7 +52,7 @@ const common = {
     form_lead: 'Describe the site: region, soil type, area or length. An engineer selects the pavement structure and dosage, a manager handles price and logistics.',
     f_name: 'Name', f_org: 'Organization', f_phone: 'Phone', f_mail: 'Email for the estimate', f_type: 'Site type', f_vol: 'Region and volume (m² or km)',
     f_types: ['Public road', 'Haul / field road', 'Alatau City — streets and infrastructure', 'Yard, parking, warehouse', 'Quarry / mining', 'Other'],
-    f_send: 'Send', f_legal: 'By clicking you agree to the processing of personal data.', f_done: 'Request received', f_done2: 'An engineer will contact you within one working day.',
+    f_send: 'Send request via WhatsApp', wa_head: 'Request from screpton.kz', wa_calc: 'Calculator estimate', f_legal: 'By clicking you agree to the processing of personal data.', f_done: 'Opening WhatsApp', f_done2: 'Your request message is ready — tap Send in WhatsApp. If nothing opened, message +7 701 566 87 31.',
     f_fast: 'Faster on WhatsApp:'
   }
 };

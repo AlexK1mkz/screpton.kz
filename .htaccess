@@ -1,0 +1,12 @@
+# HTML и скрипты — всегда проверять свежую версию после развёртывания
+<IfModule mod_headers.c>
+  <FilesMatch "\.(html|js|xml|txt)$">
+    Header set Cache-Control "no-cache, must-revalidate"
+  </FilesMatch>
+  <FilesMatch "\.(jpg|jpeg|png|svg|webp|mp4|woff2)$">
+    Header set Cache-Control "public, max-age=604800"
+  </FilesMatch>
+</IfModule>
+AddType video/mp4 .mp4
+AddType image/svg+xml .svg
+DirectoryIndex index.html
