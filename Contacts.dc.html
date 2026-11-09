@@ -175,7 +175,7 @@
 <script type="text/x-dc" data-dc-script>
 class Component extends DCLogic {
   state = { lang: 'ru', t: null, sent: false };
-  async componentDidMount() { this.i18n = await import('./i18n.js?v=20261020c'); this.pick(this.i18n.getLang(), true); }
+  async componentDidMount() { this.i18n = await import('./i18n.js?v=20261109a'); this.pick(this.i18n.getLang(), true); }
   pick(lang, init) { if (!init) this.i18n.setLang(lang); this.setState({ lang, t: this.i18n.dict('contacts', lang) }); }
   renderVals() {
     const s = this.state, t = s.t || {};

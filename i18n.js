@@ -115,6 +115,23 @@ const home = {
     ast_facts: [['20+', 'улиц Астаны с 2016 года'], ['30 см', 'глубина корыта вместо метра выемки'], ['2 слоя', 'легко проверить: толщину и прочность каждого'], ['0', 'замены грунта — коммуникации не трогаем']],
     ast_anti_h: 'Дорога, которую легко проверить', ast_anti_p: 'Конструкция из двух слоёв — укреплённый грунт и асфальт. Керн из каждого слоя показывает толщину и прочность. Скрыть недоделку в такой дороге негде: акимату и контролирующим органам проверка занимает один выезд.',
     ast_gal: [['img/astana-before-1.jpg', 'Было: улица после дождя'], ['img/astana-pipes-1.jpg', 'Коммуникации в корыте 30 см'], ['img/astana-base-2.jpg', 'Укреплённый слой после грейдера'], ['img/astana-base-1.jpg', 'Готовое основание перед асфальтом'], ['img/astana-asphalt-1.jpg', 'Укладка асфальта'], ['img/astana-after-1.jpg', 'Стало: готовая улица'], ['img/lab-1.jpg', 'Контроль прочности в лаборатории'], ['img/astana-check.jpg', 'Проверка ровности покрытия']],
+    hero_video: 'Видео: срез через 3 года',
+    tv_k: 'Технология в разрезе · видео с объекта', tv_badge: 'Видео',
+    tv_h: 'Вскрыли основание через 3 года: слой SCREPTON стабилизировался и выталкивает воду',
+    tv_lead: 'Три года назад методом ресайклинга сделали площадку АЗС с нуля — до этого там ничего не было. Сейчас заправку расширяют, основание вскрыли, и на срезе видно, как технология работает в жизни: укреплённый слой отличается по цвету и держит форму как монолит.',
+    tv_play: 'Смотреть срез основания', tv_tag1: 'Асфальт · 1 слой', tv_tag2: 'SCREPTON · 15 см', tv_tag3: 'Местный грунт',
+    tv_layers: [
+      ['Асфальт', '1 слой', 'Один тонкий слой покрытия — основание держит нагрузку само', '#3A3A36'],
+      ['Стабилизированный слой SCREPTON', '15 см', 'Светлый, другого цвета: местный грунт стал монолитом. Вода не впитывается, а выталкивается из слоя', '#CFCAB8'],
+      ['Местный грунт', 'ниже', 'Естественное основание — без выемки и без привозного щебня', '#C99A4B']
+    ],
+    tv_points: [
+      ['Слой выталкивает воду', 'Влага не задерживается в основании — нет размокания, просадок и морозного пучения'],
+      ['Монолит через 3 года', 'На срезе слой цел, ровный и чётко отделён от грунта'],
+      ['Без привозного щебня', 'Ресайклинг: укрепили то, что было на месте'],
+      ['Тонкий асфальт', 'Достаточно одного слоя покрытия поверх стабилизированного основания']
+    ],
+    tv_cta: 'Рассчитать для своего объекта',
     vid_k: 'Видео с объектов', vid_h: 'Как это выглядит на улице',
     vids: [['video/v-before', 'Улица до работ'], ['video/v-water', 'Внесение раствора SCREPTON-M'], ['video/v-base', 'Укреплённое основание'], ['video/v-paver', 'Укладка слоя'], ['video/v-roller', 'Уплотнение'], ['video/v-done', 'Готовая улица'], ['video/v-plant', 'Смесительная установка']],
     alatau_k: 'Alatau City · Алматинская область', alatau_h: 'Дорожная сеть нового города — из грунта предгорья',
@@ -184,6 +201,23 @@ const home = {
     ast_facts: [['20+', '2016 жылдан бері Астана көшесі'], ['30 см', 'бір метр қазудың орнына науа тереңдігі'], ['2 қабат', 'тексеру оңай: әрқайсысының қалыңдығы мен беріктігі'], ['0', 'топырақ ауыстыру — коммуникацияларға тимейміз']],
     ast_anti_h: 'Тексеруге оңай жол', ast_anti_p: 'Екі қабатты құрылым — нығайтылған топырақ және асфальт. Әр қабаттан алынған керн қалыңдық пен беріктікті көрсетеді. Мұндай жолда кемшілікті жасыратын жер жоқ: әкімдік пен бақылау органдарына тексеру бір сапарды алады.',
     ast_gal: [['img/astana-before-1.jpg', 'Бұрын: жаңбырдан кейінгі көше'], ['img/astana-pipes-1.jpg', '30 см науадағы коммуникациялар'], ['img/astana-base-2.jpg', 'Грейдерден кейінгі нығайтылған қабат'], ['img/astana-base-1.jpg', 'Асфальт алдындағы дайын негіз'], ['img/astana-asphalt-1.jpg', 'Асфальт төсеу'], ['img/astana-after-1.jpg', 'Қазір: дайын көше'], ['img/lab-1.jpg', 'Зертханада беріктікті бақылау'], ['img/astana-check.jpg', 'Жабынның тегістігін тексеру']],
+    hero_video: 'Видео: 3 жылдан кейінгі қима',
+    tv_k: 'Технология қимада · нысаннан видео', tv_badge: 'Видео',
+    tv_h: '3 жылдан кейін негізді аштық: SCREPTON қабаты тұрақтанып, суды сыртқа ығыстырады',
+    tv_lead: 'Үш жыл бұрын ресайклинг әдісімен ЖҚС алаңын нөлден жасадық — бұрын онда ештеңе болмаған. Қазір жанармай бекетін кеңейтіп жатыр, негіз ашылды, қимада технологияның өмірде қалай жұмыс істейтіні көрінеді: нығайтылған қабат түсі бойынша ерекшеленеді және монолит сияқты пішінін сақтайды.',
+    tv_play: 'Негіз қимасын көру', tv_tag1: 'Асфальт · 1 қабат', tv_tag2: 'SCREPTON · 15 см', tv_tag3: 'Жергілікті топырақ',
+    tv_layers: [
+      ['Асфальт', '1 қабат', 'Жабынның бір жұқа қабаты — жүктемені негіздің өзі көтереді', '#3A3A36'],
+      ['SCREPTON тұрақтандырылған қабаты', '15 см', 'Ашық, басқа түсті: жергілікті топырақ монолитке айналды. Су сіңбейді, қабаттан ығыстырылады', '#CFCAB8'],
+      ['Жергілікті топырақ', 'төменде', 'Табиғи негіз — қазусыз және әкелінетін қиыршық тассыз', '#C99A4B']
+    ],
+    tv_points: [
+      ['Қабат суды ығыстырады', 'Ылғал негізде тұрмайды — ылғалданбайды, шөкпейді, аязда көтерілмейді'],
+      ['3 жылдан кейін монолит', 'Қимада қабат бүтін, тегіс және топырақтан анық бөлінген'],
+      ['Әкелінетін қиыршық тассыз', 'Ресайклинг: орнындағы топырақты нығайттық'],
+      ['Жұқа асфальт', 'Тұрақтандырылған негіздің үстіне бір қабат жабын жеткілікті']
+    ],
+    tv_cta: 'Өз нысаныма есептеу',
     vid_k: 'Нысандардағы видео', vid_h: 'Көшеде бұл қалай көрінеді',
     vids: [['video/v-before', 'Жұмысқа дейінгі көше'], ['video/v-water', 'SCREPTON-M ерітіндісін енгізу'], ['video/v-base', 'Нығайтылған негіз'], ['video/v-paver', 'Қабатты төсеу'], ['video/v-roller', 'Тығыздау'], ['video/v-done', 'Дайын көше'], ['video/v-plant', 'Араластыру қондырғысы']],
     alatau_k: 'Alatau City · Алматы облысы', alatau_h: 'Жаңа қаланың жол желісі — тау бөктеріндегі топырақтан',
@@ -253,6 +287,23 @@ const home = {
     ast_facts: [['20+', 'Astana streets since 2016'], ['30 cm', 'trough depth instead of a metre of excavation'], ['2 layers', 'easy to inspect: thickness and strength of each'], ['0', 'soil replacement — utilities stay untouched']],
     ast_anti_h: 'A road that is easy to inspect', ast_anti_p: 'A two-layer structure — stabilized soil and asphalt. A core from each layer shows its thickness and strength. There is nowhere to hide poor work: for the administration and supervisory bodies, inspection takes a single site visit.',
     ast_gal: [['img/astana-before-1.jpg', 'Before: the street after rain'], ['img/astana-pipes-1.jpg', 'Utilities in the 30 cm trough'], ['img/astana-base-2.jpg', 'Stabilized layer after grading'], ['img/astana-base-1.jpg', 'Finished base before asphalt'], ['img/astana-asphalt-1.jpg', 'Asphalt paving'], ['img/astana-after-1.jpg', 'After: the finished street'], ['img/lab-1.jpg', 'Strength testing in the lab'], ['img/astana-check.jpg', 'Checking surface evenness']],
+    hero_video: 'Video: the cut after 3 years',
+    tv_k: 'Technology in section · site video', tv_badge: 'Video',
+    tv_h: 'We opened the base after 3 years: the SCREPTON layer has stabilized and pushes water out',
+    tv_lead: 'Three years ago we built a filling-station yard from scratch using recycling — there was nothing there before. Now the station is expanding and the base has been opened up. The cut shows how the technology works in real life: the stabilized layer has a different colour and holds its shape like a monolith.',
+    tv_play: 'Watch the base cross-section', tv_tag1: 'Asphalt · 1 layer', tv_tag2: 'SCREPTON · 15 cm', tv_tag3: 'Native soil',
+    tv_layers: [
+      ['Asphalt', '1 layer', 'A single thin wearing course — the base carries the load itself', '#3A3A36'],
+      ['SCREPTON stabilized layer', '15 cm', 'Lighter, a different colour: the native soil became a monolith. Water does not soak in — it is pushed out of the layer', '#CFCAB8'],
+      ['Native soil', 'below', 'Natural subgrade — no excavation, no imported crushed stone', '#C99A4B']
+    ],
+    tv_points: [
+      ['The layer pushes water out', 'Moisture does not stay in the base — no softening, settlement or frost heave'],
+      ['A monolith after 3 years', 'In the cut the layer is intact, even and clearly separated from the soil'],
+      ['No imported crushed stone', 'Recycling: we stabilized what was already on site'],
+      ['Thin asphalt', 'One wearing course on top of the stabilized base is enough']
+    ],
+    tv_cta: 'Get an estimate for my site',
     vid_k: 'Site videos', vid_h: 'What it looks like on the street',
     vids: [['video/v-before', 'The street before works'], ['video/v-water', 'Applying SCREPTON-M solution'], ['video/v-base', 'Stabilized base'], ['video/v-paver', 'Laying the layer'], ['video/v-roller', 'Compaction'], ['video/v-done', 'The finished street'], ['video/v-plant', 'Mixing plant']],
     alatau_k: 'Alatau City · Almaty region', alatau_h: 'A new city\u2019s road network from foothill soil',
