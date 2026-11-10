@@ -47,10 +47,10 @@
     [data-hero-txt]>div:first-child{text-shadow:0 1px 8px rgba(0,0,0,.7)}
     input[type=range]{accent-color:#1B5E3B}
     @keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
-    @keyframes tvpulse{0%{transform:scale(.9);opacity:.9}100%{transform:scale(1.6);opacity:0}}
-    [data-tv-pulse]{animation:tvpulse 1.8s ease-out infinite}
-    [data-tv-btn]:hover [data-tv-circle],[data-tv-btn]:focus-visible [data-tv-circle]{transform:scale(1.08)}
-    [data-tv-btn]:focus-visible{outline:3px solid #F5C400;outline-offset:-3px}
+    [data-tv-tag]{position:absolute;right:12px;left:38%;display:flex;align-items:center;transform:translateY(-50%);pointer-events:none}
+    [data-tv-tag] i{flex:1;height:2px;background:rgba(255,255,255,.9);position:relative;box-shadow:0 0 4px rgba(0,0,0,.4)}
+    [data-tv-tag] i::before{content:"";position:absolute;left:-5px;top:-4px;width:10px;height:10px;border-radius:50%;background:inherit;box-shadow:0 0 0 2px rgba(17,17,15,.6)}
+    [data-tv-tag] b{border-radius:8px;padding:6px 10px;font-size:13px;font-weight:600;white-space:nowrap;box-shadow:0 4px 14px rgba(0,0,0,.3)}
     html{scroll-behavior:smooth}
     @media(max-width:900px){[data-m="tv-grid"]{grid-template-columns:1fr!important}[data-fv]{position:relative!important;top:auto!important;max-width:380px;margin:0 auto!important}}
     @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
@@ -122,7 +122,7 @@
         <p style="margin:24px 0 32px;font-size:clamp(16px,1.3vw,19px);line-height:1.5;max-width:56ch;color:#fff">{{ t.hero_lead }}</p>
         <div style="display:flex;gap:12px;flex-wrap:wrap">
           <a href="#calc" style="background:#1B5E3B;color:#fff;border-radius:16px;padding:16px 24px;font-size:16px;font-weight:600" style-hover="background:#154B2F;color:#fff">{{ t.cta }}</a>
-          <a href="#tech-video" style="display:inline-flex;align-items:center;gap:12px;border:1px solid rgba(255,255,255,.7);color:#fff;border-radius:16px;padding:9px 22px 9px 9px;font-size:16px;font-weight:600" style-hover="background:rgba(255,255,255,.12);color:#fff"><span style="width:38px;height:38px;border-radius:50%;background:#F5C400;display:grid;place-items:center;flex:none"><svg width="16" height="16" viewBox="0 0 24 24" fill="#1A1A17"><path d="M7 4.5v15l13-7.5z"></path></svg></span>{{ t.hero_video }}</a>
+          <a href="#tech-cut" style="display:inline-flex;align-items:center;gap:12px;border:1px solid rgba(255,255,255,.7);color:#fff;border-radius:16px;padding:9px 22px 9px 9px;font-size:16px;font-weight:600" style-hover="background:rgba(255,255,255,.12);color:#fff"><span style="width:38px;height:38px;border-radius:50%;background:#F5C400;display:grid;place-items:center;flex:none"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1A1A17" stroke-width="2"><path d="M3 7h18M3 12h18M3 17h18"></path></svg></span>{{ t.hero_video }}</a>
         </div>
       </div>
       <div style="display:flex;gap:10px;align-items:center">
@@ -158,27 +158,16 @@
   </div>
 </div>
 
-<!-- technology on video: cut of the base after 3 years -->
-<section id="tech-video" style="max-width:1440px;width:100%;margin:0 auto;padding:clamp(72px,8vw,112px) 32px 0;scroll-margin-top:90px" data-px>
-  <div data-m="tv-grid" style="display:grid;grid-template-columns:minmax(280px,420px) minmax(0,1fr);gap:clamp(32px,5vw,72px);align-items:start">
-    <figure data-fv style="margin:0;position:sticky;top:100px;border-radius:24px;overflow:hidden;background:#1A1A17;aspect-ratio:9/16;width:100%;box-shadow:0 24px 60px -24px rgba(0,0,0,.45)">
-      <video src="video/v-recycling.mp4" poster="video/v-recycling.jpg" playsinline preload="none" style="width:100%;height:100%;object-fit:cover;display:block"></video>
-      <button type="button" onClick="{{ playFeature }}" aria-label="{{ t.tv_play }}" style="position:absolute;inset:0;border:0;padding:0;margin:0;cursor:pointer;background:linear-gradient(180deg,rgba(17,17,15,.35) 0%,rgba(17,17,15,0) 30%,rgba(17,17,15,0) 70%,rgba(17,17,15,.75) 100%);color:#fff;font:inherit;display:{{ fvOverlay }}" data-tv-btn>
-        <span style="position:absolute;top:16px;left:16px;display:inline-flex;align-items:center;gap:8px;background:rgba(17,17,15,.7);backdrop-filter:blur(6px);border-radius:999px;padding:7px 12px 7px 10px;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.06em;text-transform:uppercase"><i style="width:8px;height:8px;border-radius:50%;background:#E5484D;display:inline-block"></i>{{ t.tv_badge }}</span>
-        <span style="position:absolute;right:12px;top:47%;display:flex;flex-direction:column;gap:6px;align-items:flex-end;font-size:12px;font-weight:600;text-align:right">
-          <span style="background:rgba(17,17,15,.78);border-radius:8px;padding:5px 9px">{{ t.tv_tag1 }}</span>
-          <span style="background:#F5C400;color:#1A1A17;border-radius:8px;padding:5px 9px">{{ t.tv_tag2 }}</span>
-          <span style="background:rgba(17,17,15,.78);border-radius:8px;padding:5px 9px;margin-top:22px">{{ t.tv_tag3 }}</span>
-        </span>
-        <span style="position:absolute;left:50%;top:30%;transform:translate(-50%,-50%);display:grid;place-items:center">
-          <span data-tv-pulse style="position:absolute;width:96px;height:96px;border-radius:50%;background:rgba(245,196,0,.45)"></span>
-          <span data-tv-circle style="position:relative;width:88px;height:88px;border-radius:50%;background:#F5C400;display:grid;place-items:center;box-shadow:0 10px 30px rgba(0,0,0,.35);transition:transform .2s"><svg width="34" height="34" viewBox="0 0 24 24" fill="#1A1A17" style="margin-left:4px"><path d="M7 4.5v15l13-7.5z"></path></svg></span>
-        </span>
-        <span style="position:absolute;left:0;right:0;bottom:0;padding:18px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px;text-align:left">
-          <span style="font-size:16px;font-weight:600;line-height:1.3">{{ t.tv_play }}</span>
-          <span style="font-family:'JetBrains Mono',monospace;font-size:13px;background:rgba(255,255,255,.18);border-radius:8px;padding:5px 9px;white-space:nowrap;display:inline-flex;gap:6px;align-items:center"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 5 6 9H2v6h4l5 4zM15.5 8.5a5 5 0 0 1 0 7M19 5a10 10 0 0 1 0 14"></path></svg>1:25</span>
-        </span>
-      </button>
+<!-- technology: photo of the base cut after 3 years -->
+<section id="tech-cut" style="max-width:1440px;width:100%;margin:0 auto;padding:clamp(72px,8vw,112px) 32px 0;scroll-margin-top:90px" data-px>
+  <div data-m="tv-grid" style="display:grid;grid-template-columns:minmax(280px,440px) minmax(0,1fr);gap:clamp(32px,5vw,72px);align-items:start">
+    <figure data-fv style="margin:0;position:sticky;top:100px;border-radius:24px;overflow:hidden;background:#1A1A17;aspect-ratio:3/4;width:100%;box-shadow:0 24px 60px -24px rgba(0,0,0,.45)">
+      <img src="img/tech-cut.jpg" alt="{{ t.tv_alt }}" width="478" height="638" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">
+      <span style="position:absolute;top:16px;left:16px;background:rgba(17,17,15,.72);backdrop-filter:blur(6px);color:#fff;border-radius:999px;padding:7px 12px;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.06em;text-transform:uppercase">{{ t.tv_badge }}</span>
+      <span data-tv-tag style="top:29%"><i></i><b style="background:rgba(17,17,15,.82);color:#fff">{{ t.tv_tag1 }}</b></span>
+      <span data-tv-tag style="top:42%"><i style="background:#F5C400"></i><b style="background:#F5C400;color:#1A1A17">{{ t.tv_tag2 }}</b></span>
+      <span data-tv-tag style="top:61%"><i></i><b style="background:rgba(17,17,15,.82);color:#fff">{{ t.tv_tag3 }}</b></span>
+      <figcaption style="position:absolute;left:0;right:0;bottom:0;padding:44px 20px 16px;color:#fff;font-size:14px;line-height:1.4;background:linear-gradient(180deg,rgba(17,17,15,0),rgba(17,17,15,.8))">{{ t.tv_cap }}</figcaption>
     </figure>
     <div>
       <div style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:#1B5E3B;margin-bottom:16px">{{ t.tv_k }}</div>
@@ -577,9 +566,9 @@
 </x-dc>
 <script type="text/x-dc" data-dc-script>
 class Component extends DCLogic {
-  state = { lang: 'ru', t: null, slide: 0, open: 0, area: 10000, h: 15, soil: 0, sent: false, cookie: true, vp: {}, fv: false };
+  state = { lang: 'ru', t: null, slide: 0, open: 0, area: 10000, h: 15, soil: 0, sent: false, cookie: true, vp: {} };
   async componentDidMount() {
-    this.i18n = await import('./i18n.js?v=20261109a');
+    this.i18n = await import('./i18n.js?v=20261110a');
     const lang = this.i18n.getLang();
     let cookie = true; try { cookie = !localStorage.getItem('screpton-cookie'); } catch (e) {}
     this.setState({ lang, t: this.i18n.dict('home', lang), cookie });
@@ -627,13 +616,6 @@ class Component extends DCLogic {
           pause: ev => { ev.currentTarget.pause(); on(false); },
           toggle: ev => { const el = ev.currentTarget; if (el.paused) { const p = el.play(); if (p && p.catch) p.catch(() => {}); on(true); } else { el.pause(); on(false); } } };
       }),
-      fvOverlay: s.fv ? 'none' : 'block',
-      playFeature: ev => {
-        const v = ev.currentTarget.closest('[data-fv]').querySelector('video');
-        v.controls = true; v.muted = false;
-        const p = v.play(); if (p && p.catch) p.catch(() => { v.muted = true; v.play(); });
-        this.setState({ fv: true });
-      },
       tvLayers: (t.tv_layers || []).map((l, i) => ({ name: l[0], th: l[1], desc: l[2], c: l[3], bt: i ? '1px solid #E6E6E3' : '0', bg: i === 1 ? '#FBF8EC' : '#fff' })),
       tvPoints: (t.tv_points || []).map(p => ({ h: p[0], d: p[1] })),
       docs: (t.docs || []).map(d => ({ img: d[0], cat: d[1], title: d[2], meta: d[3] })),
